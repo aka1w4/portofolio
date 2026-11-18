@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Maple Mono";
+  src: url("/fonts/MapleMono-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+/* Oxocarbon theme */
+@theme {
+  --font-maple: "Maple Mono", monospace;
+
+  /* background */
+  --color-ox-black: #0D0D0D;
+  --color-ox-bg: #161616;
+  --color-ox-surface: #262626;
+  --color-ox-elevated: #393939;
+
+  /* foreground */
+  --color-ox-fg: #f2f4f8;
+  --color-ox-muted: #a8a8a8;
+  --color-ox-subtle: #525252;
+
+  /* syntax highlighting */
+  --color-ox-blue: #78a9ff;
+  --color-ox-purple: #be95ff;
+  --color-ox-green: #42be65;
+  --color-ox-pink: #ee5396;
+  --color-ox-cyan: #33B1FF;
+  --color-ox-sand: #D3A180;
+  --color-ox-light-sandy: #DECB9F;
+}
+
+@layer base {
+  html {
+    font-family: "Maple Mono", monospace;
+    font-size: 16px;
+    background-color: #161616;
+    color: #f2f4f8;
+  }
+
+  body {
+    font-size: 12px;
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+/* number line shiki */
+.shiki code {
+  counter-reset: line;
+}
+
+.shiki .line::before {
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  width: 2rem;
+  margin-right: 1rem;
+  text-align: right;
+  color: #525252;
+}
