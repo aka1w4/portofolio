@@ -4,13 +4,7 @@ import Experience from "../pages/Experience";
 import Projects from "../pages/Projects";
 import Skills from "../pages/Skills";
 import Contacts from "../pages/Contacts";
-
-type FileName =
-  | "about.html"
-  | "experince.html"
-  | "projects.html"
-  | "skills.html"
-  | "contacts.html";
+import type { FileName } from "../data/typefile";
 
 type ExplorerProps = {
   activeFile: FileName;
