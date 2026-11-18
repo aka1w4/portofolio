@@ -30,7 +30,9 @@ export default function Explorer({ activeFile, setActiveFile }: ExplorerProps) {
           ))}
         </div>
         <div>
-          {files[activeFile]}
+          <div className="min-h-0 overflow-y-auto">
+            {files[activeFile]}
+          </div>
         </div>
       </div>
     </div>

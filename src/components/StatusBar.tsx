@@ -9,7 +9,7 @@ type StatusbarProps = {
 
 export default function StatusBar({ activeFile }: StatusbarProps) {
   return (
-    <footer>
+    <div>
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2 pb-2">
 
@@ -53,6 +53,6 @@ export default function StatusBar({ activeFile }: StatusbarProps) {
 
       </div>
       <span>Welcome to my portfolio</span>
-    </footer>
+    </div>
   )
 }

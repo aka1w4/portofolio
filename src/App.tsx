@@ -7,7 +7,7 @@ function App() {
   const [activeFile, setActiveFile] = useState("about.html");
 
   return (
-    <div className="grid grid-rows-[1fr_auto] min-h-screen">
+    <div className="grid grid-rows-[1fr_auto] min-h-screen overflow-hidden">
       <Explorer activeFile={activeFile} setActiveFile={setActiveFile} />
       <StatusBar activeFile={activeFile} />
     </div>
